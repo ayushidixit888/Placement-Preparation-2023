@@ -1,0 +1,33 @@
+import java.util.Arrays; 
+  
+class Solution { 
+  
+    // Returns sum between two kth smallest 
+    // element of array 
+    static int sumBetweenTwoKth(int arr[], 
+                                int k1, int k2) 
+    { 
+        // Sort the given array 
+        Arrays.sort(arr); 
+  
+        // Below code is equivalent to 
+        int result = 0; 
+  
+        for (int i = k1; i < k2 - 1; i++) 
+            result += arr[i]; 
+  
+        return result; 
+    } 
+  
+    // Driver code 
+    public static void main(String[] args) 
+    { 
+  
+        int arr[] = { 20, 8, 22, 4, 12, 10, 14 }; 
+        int k1 = 3, k2 = 6; 
+        int n = arr.length; 
+  
+        System.out.print(sumBetweenTwoKth(arr, 
+                                          k1, k2)); 
+    } 
+} 
